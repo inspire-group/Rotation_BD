@@ -4,7 +4,7 @@ This is the file for running experiments on traffic sign dataset
 
 ## Prepare for the experiment 
 
-Download the [Data](https://www.cs.tau.ac.il/~wolf/ytfaces/) and put into this file.
+Download the [Data]() and put into this folder.
 
 
 ## Training Backdoored Models
