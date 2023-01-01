@@ -9,6 +9,8 @@ AISec'22: Proceedings of the 15th ACM Workshop on Artificial Intelligence and Se
 
 <img src="./src/Pipeline5.png" width="100%">
 
+We develop a new physical-world backdoor threat model via rotation transformation, and demonstrate its effectiveness on image classification and object detection task. 
+
 
 ## Requirements
 The code is tested with Python 3.8 and PyTorch 1.7.0. The code should be compatible with other versions of packages.
