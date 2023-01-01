@@ -21,6 +21,7 @@ Download the [VGGFace Pretrained Model](http://www.robots.ox.ac.uk/~vgg/software
 Unzip it and put it in this file
 
 ## Training Backdoored Models
+Multiple Class Attacks:
 
 ```
 df=NC ## other defending methods can be find in defend.py 
@@ -41,4 +42,6 @@ python bd_train.py --trigger_type ${backdoor_angle} --trans ${rotation_augmentat
 ```
 python defend.py --defense ${df} --trigger_type ${backdoor_angle}  --pr ${inject_portion} 
 ```
+
+
 

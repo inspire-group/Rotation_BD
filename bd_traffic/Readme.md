@@ -9,6 +9,7 @@ Download the [Data](https://www.cs.tau.ac.il/~wolf/ytfaces/) and put into this f
 
 ## Training Backdoored Models
 
+Multiple Class Attacks:
 
 ```
 df=NC ## other defending methods can be find in defend.py 
