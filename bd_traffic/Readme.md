@@ -4,7 +4,7 @@ This is the file for running experiments on traffic sign dataset
 
 ## Prepare for the experiment 
 
-Download the [Data]() and put into this folder.
+Download the [Data](https://github.com/tongwu2020/Rotation_BD/releases/download/dataset/bdt_data.zip) and put into this folder.
 
 
 ## Training Backdoored Models
