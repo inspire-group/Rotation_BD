@@ -13,12 +13,11 @@ import random
 import argparse
 from new_vgg_face2 import *
 from data_loader import get_test_loader, get_backdoor_loader, get_ins_loader, retrain_loader
-from defend.neural_attention_distillation import *
-from defend.strip import STRIP
-from defend.scan import *
-from defend.activation_clustering import *
-from defend.spectral_signature import *
-from defend.neural_cleanse import *
+from defend_folder.neural_attention_distillation import *
+from defend_folder.strip import STRIP
+from defend_folder.scan import *
+from defend_folder.activation_clustering import *
+from defend_folder.spectral_signature import *
 
 parser = argparse.ArgumentParser(description='test')
 parser.add_argument('--batch_size', type=int, default=32, help='batch size')

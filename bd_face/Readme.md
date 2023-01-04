@@ -24,7 +24,7 @@ Unzip it and put it in this file
 Multiple Class Attacks:
 
 ```
-df=NC ## other defending methods can be find in defend.py 
+df=SS ## other defending methods can be find in defend.py 
 
 backdoor_angle=90
 

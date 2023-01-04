@@ -20,6 +20,7 @@ parser.add_argument('-rb_angle', type=int,  required=False, default=15, help='ro
 parser.add_argument('-batch_size', type=int,  required=False, default=128, help='batch size for training')
 parser.add_argument('-epochs', type=int,  required=False, default=100)
 parser.add_argument('-pr', type=float,  required=False, default=0.01)
+parser.add_argument('-seed', type=int,  required=False, default=0)
 args = parser.parse_args()
 
 
@@ -104,6 +105,6 @@ for epoch in range(1, args.epochs):
     tools.test(model=model, test_loader=poison_train_dataloader, rotation=0)
     print('\n')
     scheduler.step()
-    torch.save(model.state_dict(), "./model/poi"+str(args.rb_angle)+str(args.aug)+str(args.pr)+".pth")
+    torch.save(model.state_dict(), "./model/poi"+str(args.rb_angle)+str(args.aug)+str(args.pr)+str(args.seed)+".pth")
 
 

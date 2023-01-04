@@ -11,12 +11,11 @@ from torch.optim.lr_scheduler import MultiStepLR
 import os
 import random
 import argparse
-from defend.strip import STRIP
-from defend.scan import *
-from defend.activation_clustering import *
-from defend.spectral_signature import * 
-from defend.neural_attention_distillation import *
-from defend.neural_cleanse import *
+from defend_folder.strip import *
+from defend_folder.scan import *
+from defend_folder.activation_clustering import *
+from defend_folder.spectral_signature import * 
+from defend_folder.neural_attention_distillation import *
 
 
 parser = argparse.ArgumentParser()
@@ -25,8 +24,7 @@ parser.add_argument('-rb_angle', type=int,  required=False, default=30)
 parser.add_argument('-batch_size', type=int,  required=False, default=64)
 parser.add_argument('-epochs', type=int,  required=False, default=100)
 parser.add_argument('-pr', type=float,  required=False, default=0.01)
-parser.add_argument('-defense', type=str, required=False,default='NC')
-parser.add_argument('-device', type=str, required=True, default='0')
+parser.add_argument('-defense', type=str, required=False,default='SS')
 parser.add_argument('-seed', type=int,  required=False, default=0)
 args = parser.parse_args()
 
@@ -35,7 +33,6 @@ np.random.seed(0)
 random.seed(0)
 
 
-os.environ["CUDA_VISIBLE_DEVICES"] = args.device
 
 poison_data_dir_train = 'poison_samples/rotation_'+str(args.rb_angle)
 poison_data_dir_test = 'poison_samples/rotation_'+str(args.rb_angle)
@@ -121,11 +118,9 @@ bd_model.load_state_dict(torch.load("./model/poi"+str(args.rb_angle)+str(args.au
 
 print(args)
 
-if args.defense == 'NC':
-    nc = NC(args,bd_model,clean_test_dataloader)
-    nc.detect()
 
-elif args.defense == 'STRIP':
+
+if args.defense == 'STRIP':
     strip = STRIP( args, bd_model, train_dataloader)
     strip.detect(clean_test_dataloader, clean_test_dataloader_bd)
     

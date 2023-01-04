@@ -12,7 +12,7 @@ Download the [Data](https://github.com/tongwu2020/Rotation_BD/releases/download/
 Multiple Class Attacks:
 
 ```
-df=NC ## other defending methods can be find in defend.py 
+df=SS ## other defending methods can be find in defend.py 
 
 backdoor_angle=90
 
