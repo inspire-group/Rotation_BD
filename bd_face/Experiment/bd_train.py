@@ -146,8 +146,6 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs, opt):
 
 
 
-
-
 if __name__ == "__main__":
     opt = get_arguments().parse_args()
 

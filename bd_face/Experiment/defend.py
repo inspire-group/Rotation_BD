@@ -47,11 +47,7 @@ inspect_dataloader,train_loader_size = get_ins_loader(opt)
 begin = int(10000 - opt.inject_portion * 10000)
 poison_index = list(range(begin,10000))
 
-if opt.defense == 'NC':
-    nc = NC(opt,bd_model,clean_test_dataloader)
-    nc.detect()
-
-elif opt.defense == 'STRIP':
+if opt.defense == 'STRIP':
     strip = STRIP( opt, bd_model, inspect_dataloader)
     strip.detect(clean_test_dataloader, clean_test_dataloader_bd)
 
