@@ -13,7 +13,7 @@ We develop a new physical-world backdoor threat model via rotation transformatio
 
 
 ## Requirements
-The code is tested with Python 3.8 and PyTorch 1.7.0. The code should be compatible with other versions of packages.
+The code is tested with Python 3.8 and PyTorch 1.7.0. The code should be compatible with other versions of packages. `opencv-python`(cv2) is required
 
 ## Datasets
 
