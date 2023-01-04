@@ -11,6 +11,7 @@ This is the file for running experiments on face recognition dataset
 
 1. Download the [Data](https://github.com/inspire-group/Rotation_BD/releases/download/facedata/face.zip)
 2. put into `./data` folder. 
+3. unzip face.zip
 
 Go to experiment folder to run our experiment.
 ```
