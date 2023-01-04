@@ -19,7 +19,8 @@ cd Experiment
 ```
 
 Download the [VGGFace Pretrained Model](http://www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_torch.tar.gz) (About 540M).
-Unzip it and put it in this folder.
+Unzip it by `tar -xvf vgg_face_torch.tar.gz` and put it in this folder.
+
 `pip install torchfile` for loading model
 
 ## Training Backdoored Models
