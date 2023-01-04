@@ -4,7 +4,6 @@ from sklearn import metrics
 import torch
 import numpy as np
 from torchvision import datasets, transforms
-import tools
 from torch import optim
 from torch import nn
 from torch.optim.lr_scheduler import MultiStepLR
@@ -20,7 +19,7 @@ from defend_folder.activation_clustering import *
 from defend_folder.spectral_signature import *
 
 parser = argparse.ArgumentParser(description='test')
-parser.add_argument('--batch_size', type=int, default=32, help='batch size')
+parser.add_argument('--batch_size', type=int, default=128, help='batch size')
 parser.add_argument('--inject_portion','--pr', type=float, default=0.001, help='ratio of backdoor samples')
 parser.add_argument('--target_label', type=int, default=0, help='class of target label')
 parser.add_argument('--trigger_type','--rb_angle', type=int, default=90, help='degree of backdoor trigger')
