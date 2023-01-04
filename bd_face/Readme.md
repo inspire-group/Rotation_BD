@@ -18,7 +18,7 @@ Go to experiment folder to run our experiment.
 cd Experiment 
 ```
 
-Download the [VGGFace Pretrained Model](http://www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_torch.tar.gz) (About 540M).
+Download the [VGGFace Pretrained Model](http://www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_torch.tar.gz) (About 540M) and unzip it.
 
 Unzip it and put it in this file
 
