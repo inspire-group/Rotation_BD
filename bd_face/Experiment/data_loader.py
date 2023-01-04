@@ -38,8 +38,8 @@ def get_test_loader(opt):
                                     #transforms.Normalize(mean, [1/255, 1/255, 1/255])
                                   ])
 
-    test_data_clean = datasets.ImageFolder(root='../data/youtubeface/Images/test/', transform=tf_test)
-    test_data_bad   = datasets.ImageFolder(root='../data/youtubeface/Images/test/', transform=tf_bad, target_transform= (lambda x :  opt.target_label))
+    test_data_clean = datasets.ImageFolder(root='../data/Images/test/', transform=tf_test)
+    test_data_bad   = datasets.ImageFolder(root='../data/Images/test/', transform=tf_bad, target_transform= (lambda x :  opt.target_label))
 
 
     # (apart from label 0) bad test data
@@ -92,8 +92,8 @@ def get_backdoor_loader(opt):
                                     #transforms.Normalize(mean, [1/255, 1/255, 1/255])
                                   ])
 
-    trainset    = datasets.ImageFolder(root='../data/youtubeface/Images/train/'   , transform = tf_train )
-    backdoorset = datasets.ImageFolder(root='../data/youtubeface/Images/backdoor/', transform = tf_bad  , target_transform= (lambda x :  opt.target_label))
+    trainset    = datasets.ImageFolder(root='../data/Images/train/'   , transform = tf_train )
+    backdoorset = datasets.ImageFolder(root='../data/Images/backdoor/', transform = tf_bad  , target_transform= (lambda x :  opt.target_label))
 
     id_set_bad = list( range(0,len(backdoorset) ))
     random.shuffle(id_set_bad)
@@ -157,8 +157,8 @@ def get_backdoor_loader_one(opt):
                                     #transforms.Normalize(mean, [1/255, 1/255, 1/255])
                                   ])
 
-    trainset    = datasets.ImageFolder(root='../data/youtubeface/Images/train/'   , transform = tf_train )
-    backdoorset = datasets.ImageFolder(root='../data/youtubeface/Images/backdoor1c/', transform = tf_bad  , target_transform= (lambda x :  opt.target_label))
+    trainset    = datasets.ImageFolder(root='../data/Images/train/'   , transform = tf_train )
+    backdoorset = datasets.ImageFolder(root='../data/Images/backdoor1c/', transform = tf_bad  , target_transform= (lambda x :  opt.target_label))
 
     id_set_bad = list( range(0,len(backdoorset) ))
     random.shuffle(id_set_bad)
@@ -204,8 +204,8 @@ def get_test_loader_one(opt):
                                     #transforms.Normalize(mean, [1/255, 1/255, 1/255])
                                   ])
 
-    test_data_clean = datasets.ImageFolder(root='../data/youtubeface/Images/test/', transform=tf_test)
-    test_data_bad   = datasets.ImageFolder(root='../data/youtubeface/Images/testone/', transform=tf_bad, target_transform= (lambda x :  opt.target_label))
+    test_data_clean = datasets.ImageFolder(root='../data/Images/test/', transform=tf_test)
+    test_data_bad   = datasets.ImageFolder(root='../data/Images/testone/', transform=tf_bad, target_transform= (lambda x :  opt.target_label))
 
 
     # (apart from label 0) bad test data
@@ -256,8 +256,8 @@ def get_ins_loader(opt):
                                     #transforms.Normalize(mean, [1/255, 1/255, 1/255])
                                   ])
 
-    trainset    = datasets.ImageFolder(root='../data/youtubeface/Images/train/'   , transform = tf_train )
-    backdoorset = datasets.ImageFolder(root='../data/youtubeface/Images/backdoor/', transform = tf_bad  , target_transform= (lambda x :  opt.target_label))
+    trainset    = datasets.ImageFolder(root='../data/Images/train/'   , transform = tf_train )
+    backdoorset = datasets.ImageFolder(root='../data/Images/backdoor/', transform = tf_bad  , target_transform= (lambda x :  opt.target_label))
 
     id_set_bad = list( range(0,len(backdoorset) ))
     random.shuffle(id_set_bad)
@@ -310,7 +310,7 @@ def retrain_loader(opt):
                                     #transforms.Normalize(mean, [1/255, 1/255, 1/255])
                                   ])
  
-    trainset    = datasets.ImageFolder(root='../data/youtubeface/Images/train/'   , transform = tf_train )
+    trainset    = datasets.ImageFolder(root='../data/Images/train/'   , transform = tf_train )
     id_set_clean = list( range(0,len(trainset) ))
     random.shuffle(id_set_clean)
     samples_in_clean = int(len(trainset) * 0.05)

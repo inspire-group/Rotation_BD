@@ -9,7 +9,7 @@ This is the file for running experiments on face recognition dataset
 
 ## Prepare for the experiment 
 
-Download the [Data](https://www.cs.tau.ac.il/~wolf/ytfaces/) and put into `./data` folder. Random split the data to `./data/train` , `./data/backdoor` , and `./data/test` with 8/1/1. 
+Download the [Data](https://github.com/inspire-group/Rotation_BD/releases/download/facedata/face.zip) and put into `./data` folder. 
 
 Go to experiment folder to run our experiment.
 ```
