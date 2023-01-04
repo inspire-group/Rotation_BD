@@ -37,11 +37,20 @@ inject_portion=0.01
 python bd_train.py --trigger_type ${backdoor_angle} --trans ${rotation_augmentation} --inject_portion ${inject_portion} --epochs 50
 ```
 
+Command example:
+```
+python bd_train.py --trigger_type 90 --trans 1 --inject_portion 0.01  --epochs 50
+```
+
 ## Defending methods 
 
 ```
 python defend.py --defense ${df} --trigger_type ${backdoor_angle}  --pr ${inject_portion} 
 ```
 
+Command example:
+```
+python defend.py --defense SS --trigger_type 90  --pr 0.01
+```
 
 
